@@ -1,0 +1,20 @@
+Consultorio Dental de las Hermanas Pérez
+Ubicación: Alameda Otay Medical Center
+
+Servicios y Precios En dolares Americanos:
+- Limpieza dental: $50
+- Blanqueamiento dental: $100
+- Ortodoncia: desde $500
+- Carillas dentales: $200 por diente
+- Extracción dental: $75
+- Rellenos dentales: $80
+- Coronas dentales: $250
+
+Horario de Atención:
+Lunes a Viernes: 9:00 AM - 5:00 PM
+Sábados: 10:00 AM - 2:00 PM
+Domingos: Cerrado
+
+Contacto:
+Teléfono: 555-1234
+Correo: consultorio.perez@dentistas.com
