@@ -1,30 +1,47 @@
-#chat-container {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Estilos del contenedor del chat */
+.chat-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    max-width: 300px;
+    margin: 0 20px 20px 0;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Estilos de la caja de mensajes */
 .chat-box {
-    height: 300px;
+    height: 400px;
     overflow-y: auto;
-    border-bottom: 1px solid #ccc;
     padding: 10px;
     background-color: #fff;
 }
 
+/* Estilos del área de entrada */
 .input-area {
     display: flex;
     padding: 10px;
+    border-top: 1px solid #ccc;
 }
 
 .chat-input {
     flex-grow: 1;
     padding: 5px;
     border: 1px solid #ccc;
-    border-right: none;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
 .send-btn {
@@ -32,6 +49,7 @@
     background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -39,4 +57,78 @@
     background-color: #0056b3;
 }
 
-/* Agrega aquí más estilos según lo necesites */
+/* Estilos para mensajes individuales */
+.chat-box div {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Estilo para mensajes del chatbot */
+.chat-box div.bot-message {
+    background-color: #e0e0e0; /* Color gris claro para el chatbot */
+    color: black;
+    margin-right: auto;
+    text-align: left;
+    max-width: 80%;
+}
+
+/* Estilo para mensajes del usuario */
+.chat-box div.user-message {
+    background-color: #007bff; /* Color azul para el usuario */
+    color: white;
+    margin-left: auto;
+    text-align: right;
+    max-width: 80%;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+}
+
+.chat-header span {
+    font-weight: bold;
+}
+
+.toggle-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Estilo para minimizar/maximizar el chat */
+.chat-box.minimized {
+    height: 0;
+    padding: 0;
+    border: none;
+}
+
+.input-area.minimized {
+    display: none;
+}
+
+/* Animaciones para la aparición de mensajes */
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.chat-box div {
+    animation: slide-in 0.3s ease;
+}
